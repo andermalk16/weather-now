@@ -72,6 +72,9 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.google.firebase:firebase-crash:10.2.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.daimajia.easing:library:2.0@aar'
+    compile 'com.daimajia.androidanimations:library:2.3@aar'
+
     testCompile 'junit:junit:4.12'
     kapt 'com.google.dagger:dagger-compiler:2.5'
 }

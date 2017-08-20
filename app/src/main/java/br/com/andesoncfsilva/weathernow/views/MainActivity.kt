@@ -10,6 +10,8 @@ import br.com.andesoncfsilva.weathernow.entities.CityWeather
 import br.com.andesoncfsilva.weathernow.entities.UnitTemp
 import br.com.andesoncfsilva.weathernow.exception.factory.ErrorMessageFactory
 import br.com.andesoncfsilva.weathernow.views.base.MvpActivity
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import kotlinx.android.synthetic.main.activity_main.*
@@ -87,15 +89,20 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
             }
             R.id.menu_list -> {
                 currentLayout = WEATHER_MODE_LIST
-
+                YoYo.with(Techniques.FadeIn)
+                        .duration(1000)
+                        .playOn(flContainerFrags)
             }
             R.id.menu_map -> {
                 currentLayout = WEATHER_MODE_MAP
+                YoYo.with(Techniques.FadeIn)
+                        .duration(1000)
+                        .playOn(flContainerFrags)
             }
         }
-        setupFragment()
-        invalidateOptionsMenu()
 
+        invalidateOptionsMenu()
+        setupFragment()
         return super.onOptionsItemSelected(item)
     }
 
