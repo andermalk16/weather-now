@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Clima Agora</string>
+    <string name="title_activity_main">Clima</string>
+    <string name="weather">Clima</string>
+
+    <string name="map">map</string>
+    <string name="temperature_fahrenheit">temperature_fahrenheit</string>
+    <string name="format_list_bulleted">format_list_bulleted</string>
+    <string name="temperature_celsius">temperature_celsius</string>
+
+    <string name="distance_km">%1$.2f Km</string>
+    <string name="max_temp">Min: %1$s °%2$s</string>
+    <string name="min_temp">Max: %1$s °%2$s</string>
+    <string name="current_temp">%1$s °%2$s</string>
+</resources>

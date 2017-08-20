@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "829026698619",
+    "firebase_url": "https://weather-now-80884.firebaseio.com",
+    "project_id": "weather-now-80884",
+    "storage_bucket": "weather-now-80884.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829026698619:android:79fd2477ef1cb9d0",
+        "android_client_info": {
+          "package_name": "br.com.andesoncfsilva.weathernow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829026698619-g5q79jfhp6el0fskbfdrg9b61nc258jn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.andesoncfsilva.weathernow",
+            "certificate_hash": "11cf0b18ab251d9ad1556be936eaacd7531886ba"
+          }
+        },
+        {
+          "client_id": "829026698619-ud5rnkbviq88flsg8rubl4h1gp3p4n6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsQqi0qqKRQm57Jp8ncbVfCdcPeb2dwIo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829026698619-ud5rnkbviq88flsg8rubl4h1gp3p4n6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_temp_f"
+        android:icon="@drawable/temperature_fahrenheit"
+        android:title="@string/temperature_fahrenheit"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_temp_c"
+        android:icon="@drawable/temperature_celsius"
+        android:title="@string/temperature_celsius"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_map"
+        android:icon="@drawable/map"
+        android:title="@string/map"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_list"
+        android:icon="@drawable/format_list_bulleted"
+        android:title="@string/format_list_bulleted"
+        app:showAsAction="ifRoom" />
+</menu>

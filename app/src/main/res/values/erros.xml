@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_no_connection">Parece que você está sem internet =(</string>
+    <string name="error_interrupted_connection">Por favor, verifique sua conexão e tente novamente.</string>
+    <string name="error_generic">Não foi possivel concluir a operação, tente novamente.</string>
+    <string name="error_no_gps">Parece que você está sem sinal de GPS.</string>
+    <string name="error_permission">Você necessita do GPS para utilizar o este aplicativo.</string>
+    <string name="error_timeout">O tempo para conexão com o servidor expirou. Por favor tente novamente.</string>
+</resources>
