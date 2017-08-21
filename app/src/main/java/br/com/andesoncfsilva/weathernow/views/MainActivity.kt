@@ -96,12 +96,16 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
                 YoYo.with(Techniques.FadeIn)
                         .duration(1000)
                         .playOn(flContainerFrags)
+                showFragments()
+                refreshMenu()
             }
             R.id.menu_map -> {
                 currentLayout = WEATHER_MODE_MAP
                 YoYo.with(Techniques.FadeIn)
                         .duration(1000)
                         .playOn(flContainerFrags)
+                showFragments()
+                refreshMenu()
             }
         }
 
