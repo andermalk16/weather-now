@@ -9,9 +9,7 @@ import android.view.ViewGroup
 import br.com.andesoncfsilva.weathernow.R
 import br.com.andesoncfsilva.weathernow.entities.CityWeather
 import br.com.andesoncfsilva.weathernow.utils.WNLog
-import br.com.andesoncfsilva.weathernow.views.SetCameraPosition
-import br.com.andesoncfsilva.weathernow.views.ShowCitiesWeather
-import br.com.andesoncfsilva.weathernow.views.UpdateCities
+import br.com.andesoncfsilva.weathernow.views.*
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener
 import com.google.android.gms.maps.model.LatLng
@@ -19,6 +17,7 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_cities_weather_map.*
 import kotlinx.android.synthetic.main.fragment_cities_weather_map.view.*
 import kotlinx.android.synthetic.main.window_layout.view.*
 import org.greenrobot.eventbus.EventBus
@@ -59,7 +58,7 @@ class CitiesWeatherMapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnCam
             override fun onFinish() {
                 timer?.cancel()
                 mMap?.cameraPosition?.target?.let {
-                    EventBus.getDefault().post(UpdateCities(it.latitude, it.longitude))
+                    EventBus.getDefault().post(SearchNewWeatherCities(it.latitude, it.longitude))
                 }
             }
         }
@@ -217,5 +216,14 @@ class CitiesWeatherMapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnCam
         lastOpened?.showInfoWindow()
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun showLoading(e: ShowLoading) {
+        pbLoading.visibility = View.VISIBLE
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun hideLoading(e: HideLoading) {
+        pbLoading.visibility = View.INVISIBLE
+    }
 
 }

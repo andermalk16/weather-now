@@ -10,4 +10,9 @@ import br.com.andesoncfsilva.weathernow.entities.UnitTemp
 class ShowCitiesWeather(val list: List<CityWeather>)
 
 class SetCameraPosition(val latitude: Double, val longitude: Double)
-class UpdateCities(val latitude: Double, val longitude: Double)
+class SearchNewWeatherCities(val latitude: Double, val longitude: Double)
+class RefreshWeatherCities()
+class ShowLoading()
+class HideLoading()
+
+

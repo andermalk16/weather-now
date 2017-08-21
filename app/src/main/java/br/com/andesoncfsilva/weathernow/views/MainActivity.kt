@@ -120,11 +120,11 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
     }
 
     override fun showLoading() {
-        pbLoading.visibility = View.VISIBLE
+        EventBus.getDefault().post(ShowLoading())
     }
 
     override fun hideLoading() {
-        pbLoading.visibility = View.INVISIBLE
+        EventBus.getDefault().post(HideLoading())
     }
 
     override fun showError(e: Throwable) {
@@ -132,10 +132,15 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun showCities(e: UpdateCities) {
+    fun showCities(e: SearchNewWeatherCities) {
         currentLatitude = e.latitude
         currentLongitude = e.longitude
         presenter?.getWeatherList(currentUnit, e.latitude, e.longitude)
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun refreshWeatherCities(e: RefreshWeatherCities) {
+        presenter?.getWeatherList(this.currentUnit, this.currentLatitude, this.currentLongitude)
     }
 
     private fun checkPlayServicesAvailable(): Boolean {

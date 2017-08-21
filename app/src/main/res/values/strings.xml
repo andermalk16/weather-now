@@ -8,8 +8,8 @@
     <string name="format_list_bulleted">format_list_bulleted</string>
     <string name="temperature_celsius">temperature_celsius</string>
 
-    <string name="distance_km">%1$.2f Km</string>
-    <string name="max_temp">Max: %1$s °%2$s</string>
+    <string name="distance_km">%1$.2f Km de distância</string>
+    <string name="max_temp">Máx: %1$s °%2$s</string>
     <string name="min_temp">Min: %1$s °%2$s</string>
     <string name="current_temp">%1$s °%2$s</string>
 </resources>

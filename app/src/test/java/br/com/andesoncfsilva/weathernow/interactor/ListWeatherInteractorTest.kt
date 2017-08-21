@@ -28,7 +28,6 @@ import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
-import java.net.SocketTimeoutException
 
 /**
  * Created by Anderson Silva on 20/08/17.
@@ -65,7 +64,7 @@ class ListWeatherInteractorTest {
     }
 
     @Test
-    fun shouldExecuteInteractorWithoutErrors() {
+    fun shouldExecuteInteractorWithoutErrorsInsideRange() {
         var executeOk = false
         var result: ListCitiesWeather? = null
 
@@ -86,6 +85,39 @@ class ListWeatherInteractorTest {
 
         assertThat(executeOk).isTrue()
         assertThat(result).isNotNull()
+        assertThat(result?.cities?.count()).isEqualTo(MockHelper.currentWeatherResponse.city?.count())
+
+        verify(mockMapperCityWeather).convert(MockHelper.currentWeatherResponse, MockHelper.unitTemp)
+        verify(mockHardwareUtil).connected()
+        verify(mockGeoCalculator).calculateBox(MockHelper.latitude, MockHelper.longitude)
+        verify(mockGeoCalculator, times(2)).calculateDistance(MockHelper.cityWeather, MockHelper.latitude, MockHelper.longitude)
+        verify(mockWeatherApi).getCurrentWeather(any(), any(), any(), any(), any())
+
+    }
+
+    @Test
+    fun shouldExecuteInteractorWithoutErrorsOutsideRange() {
+        var executeOk = false
+        var result: ListCitiesWeather? = null
+
+        `when`(mockMapperCityWeather.convert(MockHelper.currentWeatherResponse, MockHelper.unitTemp)).thenReturn(arrayListOf(MockHelper.cityWeather))
+        `when`(mockHardwareUtil.connected()).thenReturn(true)
+        `when`(mockGeoCalculator.calculateBox(MockHelper.latitude, MockHelper.longitude)).thenReturn(MockHelper.geoBox)
+        `when`(mockGeoCalculator.calculateDistance(MockHelper.cityWeather, MockHelper.latitude, MockHelper.longitude)).thenReturn(51000.0)
+        `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenReturn(Observable.just(MockHelper.currentWeatherResponse))
+
+        interactor.execute(
+                MockHelper.unitTemp,
+                MockHelper.latitude,
+                MockHelper.longitude,
+                MockHelper.latitude,
+                MockHelper.longitude,
+                Consumer { executeOk = true; result = it },
+                Consumer { fail("error ListWeatherInteractor", it) })
+
+        assertThat(executeOk).isTrue()
+        assertThat(result).isNotNull()
+        assertThat(result?.cities?.count()).isEqualTo(0)
 
         verify(mockMapperCityWeather).convert(MockHelper.currentWeatherResponse, MockHelper.unitTemp)
         verify(mockHardwareUtil).connected()
