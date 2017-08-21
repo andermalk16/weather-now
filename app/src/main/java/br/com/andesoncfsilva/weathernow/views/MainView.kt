@@ -11,6 +11,9 @@ interface MainView : MvpView {
     fun setCameraPosition(latitude: Double, longitude: Double)
     fun showLoading()
     fun hideLoading()
+    fun hideFragments()
     fun showError(e: Throwable)
     fun showCitiesWeather(cities: List<CityWeather>)
+    fun showFragments()
+    fun refreshMenu()
 }

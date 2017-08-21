@@ -12,6 +12,8 @@ import com.patloew.rxlocation.RxLocation
 import com.tbruyelle.rxpermissions2.RxPermissions
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.functions.Consumer
+import io.reactivex.rxkotlin.toSingle
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 /**
@@ -54,17 +56,15 @@ class LocationInteractorImpl
                             .subscribeOn(threadExecutor.scheduler)
                 }
                 .doOnNext { if (!it) throw NoGPSException() }
-
                 //get Location
                 .flatMap {
                     locationProvider.location()
-                            .lastLocation()
+                            .updates(locationRequest)
+                            .timeout(10, TimeUnit.SECONDS)
+                            .firstOrError()
                             .toObservable()
                             .observeOn(postExecutionThread.scheduler)
                             .subscribeOn(threadExecutor.scheduler)
-                }
-                .doOnNext {
-                    WNLog.d("My Location ====> latitude: ${it.latitude} longitude: ${it.longitude}")
                 }
                 //handle threads executions
                 .observeOn(postExecutionThread.scheduler)

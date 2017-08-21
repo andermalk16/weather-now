@@ -9,6 +9,7 @@ import br.com.andesoncfsilva.weathernow.R
 import br.com.andesoncfsilva.weathernow.entities.CityWeather
 import br.com.andesoncfsilva.weathernow.entities.UnitTemp
 import br.com.andesoncfsilva.weathernow.exception.factory.ErrorMessageFactory
+import br.com.andesoncfsilva.weathernow.utils.safeLet
 import br.com.andesoncfsilva.weathernow.views.base.MvpActivity
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
@@ -26,8 +27,8 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
 
     private val WEATHER_MODE_LIST = "WEATHER_MODE_LIST"
     private val WEATHER_MODE_MAP = "WEATHER_MODE_MAP"
-    private var currentLatitude: Double = 0.0
-    private var currentLongitude: Double = 0.0
+    private var currentLatitude: Double? = null
+    private var currentLongitude: Double? = null
     private var currentUnit = UnitTemp.CELSIUS
     private var currentLayout = WEATHER_MODE_LIST
 
@@ -44,7 +45,6 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        setupFragment()
     }
 
     override fun onStart() {
@@ -71,17 +71,25 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         return true
     }
 
+    override fun hideFragments() {
+        listFragmentContainer.visibility = View.GONE
+        mapFragmentContainer.visibility = View.GONE
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.menu_temp_c -> {
                 currentUnit = UnitTemp.CELSIUS
-                presenter?.getWeatherList(currentUnit, this.currentLatitude, this.currentLongitude)
+                safeLet(this.currentLatitude, this.currentLongitude) { lat, lon ->
+                    presenter?.getWeatherList(currentUnit, lat, lon)
+                }
 
             }
             R.id.menu_temp_f -> {
                 currentUnit = UnitTemp.FAHRENHEIT
-                presenter?.getWeatherList(currentUnit, this.currentLatitude, this.currentLongitude)
-
+                safeLet(this.currentLatitude, this.currentLongitude) { lat, lon ->
+                    presenter?.getWeatherList(currentUnit, lat, lon)
+                }
             }
             R.id.menu_list -> {
                 currentLayout = WEATHER_MODE_LIST
@@ -97,12 +105,15 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
             }
         }
 
-        invalidateOptionsMenu()
-        setupFragment()
+
         return super.onOptionsItemSelected(item)
     }
 
-    private fun setupFragment() {
+    override fun refreshMenu(){
+        invalidateOptionsMenu()
+    }
+
+    override fun showFragments() {
         listFragmentContainer.visibility = if (currentLayout == WEATHER_MODE_LIST) View.VISIBLE else View.GONE
         mapFragmentContainer.visibility = if (currentLayout == WEATHER_MODE_MAP) View.VISIBLE else View.GONE
     }
@@ -112,7 +123,9 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         EventBus.getDefault().post(SetCameraPosition(latitude, longitude))
         this.currentLatitude = latitude
         this.currentLongitude = longitude
-        presenter?.getWeatherList(currentUnit, this.currentLatitude, this.currentLongitude)
+        safeLet(this.currentLatitude, this.currentLongitude) { lat, lon ->
+            presenter?.getWeatherList(currentUnit, lat, lon)
+        }
     }
 
     override fun showCitiesWeather(cities: List<CityWeather>) {
@@ -140,7 +153,9 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun refreshWeatherCities(e: RefreshWeatherCities) {
-        presenter?.getWeatherList(this.currentUnit, this.currentLatitude, this.currentLongitude)
+        safeLet(this.currentLatitude, this.currentLongitude) { lat, lon ->
+            presenter?.getWeatherList(currentUnit, lat, lon)
+        }
     }
 
     private fun checkPlayServicesAvailable(): Boolean {
