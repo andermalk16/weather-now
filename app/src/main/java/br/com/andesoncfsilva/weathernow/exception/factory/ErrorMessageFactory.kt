@@ -3,10 +3,7 @@ package br.com.andesoncfsilva.weathernow.exception.factory
 import android.content.Context
 import br.com.andesoncfsilva.weathernow.R
 import br.com.andesoncfsilva.weathernow.di.scopes.PerActivity
-import br.com.andesoncfsilva.weathernow.exception.GPSResolutionRequiredException
-import br.com.andesoncfsilva.weathernow.exception.NoConnectionException
-import br.com.andesoncfsilva.weathernow.exception.NoGPSException
-import br.com.andesoncfsilva.weathernow.exception.NoPermissionException
+import br.com.andesoncfsilva.weathernow.exception.*
 import br.com.andesoncfsilva.weathernow.utils.WNLog
 import okhttp3.internal.http2.ConnectionShutdownException
 import retrofit2.HttpException
@@ -27,21 +24,15 @@ class ErrorMessageFactory @Inject constructor(private val context: Context) {
         return if (exception is NoGPSException || exception is GPSResolutionRequiredException) {
             WNLog.w(exception)
             context.getString(R.string.error_no_gps)
-        } else if (exception is ConnectionShutdownException) {
-            WNLog.w(exception)
-            context.getString(R.string.error_interrupted_connection)
-        } else if (exception is NoConnectionException || exception is UnknownHostException || exception is SocketException) {
+        } else if (exception is NoConnectionException) {
             WNLog.w(exception)
             context.getString(R.string.error_no_connection)
         } else if (exception is NoPermissionException) {
             WNLog.w(exception)
             context.getString(R.string.error_permission)
-        } else if (exception is SocketTimeoutException) {
+        } else if (exception is RestAPIException) {
             WNLog.w(exception)
-            context.getString(R.string.error_timeout)
-        } else if (exception is HttpException) {
-            WNLog.e(exception)
-            exception.message ?: context.getString(R.string.error_generic)
+            context.getString(R.string.error_connection)
         } else {
             WNLog.e(exception)
             context.getString(R.string.error_generic)

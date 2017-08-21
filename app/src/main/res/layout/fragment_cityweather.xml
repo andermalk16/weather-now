@@ -32,8 +32,7 @@
         <TextView
             android:id="@+id/tvCityDistance"
             android:layout_width="wrap_content"
-            android:layout_toEndOf="@+id/tvCityName"
-            android:layout_alignBaseline="@+id/tvCityName"
+            android:layout_below="@+id/tvCityName"
             android:layout_height="wrap_content"
             android:text="999 KM"
             android:layout_marginStart="4dp"
@@ -44,7 +43,7 @@
             android:id="@+id/llWeatherContainer"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvCityName"
+            android:layout_below="@id/tvCityDistance"
             android:orientation="horizontal">
 
             <ImageView
@@ -72,7 +71,7 @@
             android:layout_marginBottom="8dp"
             android:text="27C"
             android:textColor="@color/colorAccent"
-            android:textSize="40sp" />
+            android:textSize="50sp" />
 
         <LinearLayout
             android:layout_width="200dp"

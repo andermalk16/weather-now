@@ -2,6 +2,7 @@ package br.com.andesoncfsilva.weathernow.data
 
 import br.com.andesoncfsilva.weathernow.data.response.CurrentWeatherResponse
 import br.com.andesoncfsilva.weathernow.entities.UnitTemp
+import br.com.andesoncfsilva.weathernow.exception.RestAPIException
 import br.com.andesoncfsilva.weathernow.utils.OpenWeatherMapUtil
 import io.reactivex.Observable
 import javax.inject.Inject
@@ -24,6 +25,7 @@ class WeatherApiImpl @Inject constructor(private val api: RestApi,
                 openWeatherMapUtil.getKey(),
                 "$lon_left,$lat_bottom,$lon_right,$lat_top,100",
                 units)
+                .doOnError { throw RestAPIException(it) }
     }
 }
 

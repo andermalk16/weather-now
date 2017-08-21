@@ -7,6 +7,7 @@ import br.com.andesoncfsilva.weathernow.di.executors.PostExecutionThread
 import br.com.andesoncfsilva.weathernow.di.executors.ThreadExecutor
 import br.com.andesoncfsilva.weathernow.entities.ListCitiesWeather
 import br.com.andesoncfsilva.weathernow.exception.NoConnectionException
+import br.com.andesoncfsilva.weathernow.exception.RestAPIException
 import br.com.andesoncfsilva.weathernow.interactors.ListWeatherInteractor
 import br.com.andesoncfsilva.weathernow.interactors.ListWeatherInteractorImpl
 import br.com.andesoncfsilva.weathernow.util.MockHelper
@@ -113,7 +114,7 @@ class ListWeatherInteractorTest {
 
         assertThat(executeOk).isFalse()
         assertThat(result).isNull()
-        assertThat(error is NoConnectionException).isTrue()
+        assertThat(error).isInstanceOf(NoConnectionException::class.java)
 
         verify(mockHardwareUtil).connected()
 
@@ -125,8 +126,9 @@ class ListWeatherInteractorTest {
         var result: ListCitiesWeather? = null
         var error: Throwable? = null
 
+        `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenThrow(RestAPIException(RuntimeException()))
+        `when`(mockGeoCalculator.calculateBox(MockHelper.latitude, MockHelper.longitude)).thenReturn(MockHelper.geoBox)
         `when`(mockHardwareUtil.connected()).thenReturn(true)
-        `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenThrow(SocketTimeoutException())
 
 
         interactor.execute(
@@ -140,7 +142,7 @@ class ListWeatherInteractorTest {
 
         assertThat(executeOk).isFalse()
         assertThat(result).isNull()
-        assertThat(error is SocketTimeoutException).isTrue()
+        assertThat(error).isInstanceOf(RestAPIException::class.java)
 
         verify(mockHardwareUtil).connected()
     }
