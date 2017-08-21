@@ -27,6 +27,7 @@ import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
+import java.net.SocketTimeoutException
 
 /**
  * Created by Anderson Silva on 20/08/17.
@@ -94,7 +95,7 @@ class ListWeatherInteractorTest {
     }
 
     @Test
-    fun shouldThrowsNoConnection() {
+    fun shouldThrowsNoConnectionException() {
         var executeOk = false
         var result: ListCitiesWeather? = null
         var error: Throwable? = null
@@ -116,5 +117,31 @@ class ListWeatherInteractorTest {
 
         verify(mockHardwareUtil).connected()
 
+    }
+
+    @Test
+    fun shouldThrowsSocketException() {
+        var executeOk = false
+        var result: ListCitiesWeather? = null
+        var error: Throwable? = null
+
+        `when`(mockHardwareUtil.connected()).thenReturn(true)
+        `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenThrow(SocketTimeoutException())
+
+
+        interactor.execute(
+                MockHelper.unitTemp,
+                MockHelper.latitude,
+                MockHelper.longitude,
+                MockHelper.latitude,
+                MockHelper.longitude,
+                Consumer { executeOk = true; result = it },
+                Consumer { error = it })
+
+        assertThat(executeOk).isFalse()
+        assertThat(result).isNull()
+        assertThat(error is SocketTimeoutException).isTrue()
+
+        verify(mockHardwareUtil).connected()
     }
 }
