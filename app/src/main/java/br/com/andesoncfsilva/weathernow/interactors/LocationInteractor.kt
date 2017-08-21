@@ -4,15 +4,14 @@ import android.Manifest
 import android.location.Location
 import br.com.andesoncfsilva.weathernow.di.executors.PostExecutionThread
 import br.com.andesoncfsilva.weathernow.di.executors.ThreadExecutor
+import br.com.andesoncfsilva.weathernow.exception.GPSResolutionRequiredException
 import br.com.andesoncfsilva.weathernow.exception.NoGPSException
 import br.com.andesoncfsilva.weathernow.exception.NoPermissionException
-import br.com.andesoncfsilva.weathernow.utils.WNLog
 import com.google.android.gms.location.LocationRequest
 import com.patloew.rxlocation.RxLocation
 import com.tbruyelle.rxpermissions2.RxPermissions
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.functions.Consumer
-import io.reactivex.rxkotlin.toSingle
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -55,13 +54,14 @@ class LocationInteractorImpl
                             .observeOn(postExecutionThread.scheduler)
                             .subscribeOn(threadExecutor.scheduler)
                 }
-                .doOnNext { if (!it) throw NoGPSException() }
+                .doOnNext { if (!it) throw GPSResolutionRequiredException() }
                 //get Location
                 .flatMap {
                     locationProvider.location()
                             .updates(locationRequest)
                             .timeout(10, TimeUnit.SECONDS)
                             .firstOrError()
+                            .doOnError { throw NoGPSException() }
                             .toObservable()
                             .observeOn(postExecutionThread.scheduler)
                             .subscribeOn(threadExecutor.scheduler)

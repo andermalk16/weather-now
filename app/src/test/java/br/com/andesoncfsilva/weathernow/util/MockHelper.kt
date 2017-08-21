@@ -1,9 +1,11 @@
 package br.com.andesoncfsilva.weathernow.util
 
+import android.location.Location
 import br.com.andesoncfsilva.weathernow.data.response.*
 import br.com.andesoncfsilva.weathernow.entities.CityWeather
 import br.com.andesoncfsilva.weathernow.entities.GeoBox
 import br.com.andesoncfsilva.weathernow.entities.UnitTemp
+import com.google.android.gms.location.LocationRequest
 
 /**
  * Created by Anderson Silva on 20/08/17.
@@ -56,4 +58,9 @@ object MockHelper {
             return CurrentWeatherResponse(city = list, cnt = list.count())
         }
 
+    val locationRequest = LocationRequest.create()
+            .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+            .setInterval(500)
+
+    val location : Location = Location("FakeLocation")
 }

@@ -141,7 +141,7 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
     }
 
     override fun showError(e: Throwable) {
-        Snackbar.make(findViewById(android.R.id.content), errorMessageFactory.create(e), Snackbar.LENGTH_INDEFINITE).show()
+        Snackbar.make(findViewById(android.R.id.content), errorMessageFactory.create(e), Snackbar.LENGTH_LONG).show()
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -165,8 +165,6 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         if (status != ConnectionResult.SUCCESS) {
             if (apiAvailability.isUserResolvableError(status)) {
                 apiAvailability.getErrorDialog(this, status, 1).show()
-            } else {
-
             }
             return false
         }

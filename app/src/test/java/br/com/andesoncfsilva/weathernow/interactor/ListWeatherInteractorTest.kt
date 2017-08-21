@@ -73,7 +73,7 @@ class ListWeatherInteractorTest {
                 MockHelper.latitude,
                 MockHelper.longitude,
                 Consumer { executeOk = true; result = it },
-                Consumer { fail("error ListWeatherInteractor", it) })
+                Consumer { fail("error", it) })
 
         assertThat(executeOk).isTrue()
         assertThat(result).isNotNull()
@@ -105,7 +105,7 @@ class ListWeatherInteractorTest {
                 MockHelper.latitude,
                 MockHelper.longitude,
                 Consumer { executeOk = true; result = it },
-                Consumer { fail("error ListWeatherInteractor", it) })
+                Consumer { fail("error", it) })
 
         assertThat(executeOk).isTrue()
         assertThat(result).isNotNull()
