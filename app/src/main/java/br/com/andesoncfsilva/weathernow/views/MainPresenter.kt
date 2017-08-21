@@ -6,6 +6,7 @@ import br.com.andesoncfsilva.weathernow.exception.GPSResolutionRequiredException
 import br.com.andesoncfsilva.weathernow.exception.NoGPSException
 import br.com.andesoncfsilva.weathernow.interactors.ListWeatherInteractor
 import br.com.andesoncfsilva.weathernow.interactors.LocationInteractor
+import br.com.andesoncfsilva.weathernow.utils.safeLet
 import br.com.andesoncfsilva.weathernow.views.base.MvpPresenter
 import io.reactivex.functions.Consumer
 import javax.inject.Inject
@@ -20,11 +21,12 @@ class MainPresenter @Inject constructor(private val listWeatherInteractor: ListW
 ) : MvpPresenter<MainView>() {
 
     var loading = false
-    private var userLatitude: Double = 0.0
-    private var userLongitude: Double = 0.0
+    var userLatitude: Double? = null
+    var userLongitude: Double? = null
 
     override fun detachView() {
         listWeatherInteractor.unsubscribe()
+        locationInteractor.unsubscribe()
         super.detachView()
     }
 
@@ -35,6 +37,7 @@ class MainPresenter @Inject constructor(private val listWeatherInteractor: ListW
                 Consumer {
                     userLatitude = it.latitude
                     userLongitude = it.longitude
+                    view?.hideLoading()
                     view?.showFragments()
                     view?.refreshMenu()
                     view?.setCameraPosition(it.latitude, it.longitude)
@@ -52,21 +55,24 @@ class MainPresenter @Inject constructor(private val listWeatherInteractor: ListW
         if (!loading) {
             loading = true
             view?.showLoading()
-            listWeatherInteractor.execute(unitTemp, userLatitude, userLongitude, latitude, longitude,
-                    //onSuccess
-                    Consumer {
-                        loading = false
-                        view?.hideLoading()
-                        view?.showFragments()
-                        view?.refreshMenu()
-                        view?.showCitiesWeather(it.cities)
-                    },
-                    //onError
-                    Consumer {
-                        loading = false
-                        view?.hideLoading()
-                        view?.showError(it)
-                    })
+            safeLet(userLatitude, userLongitude) { userLatitude, userLongitude ->
+                listWeatherInteractor.execute(unitTemp, userLatitude, userLongitude, latitude, longitude,
+                        //onSuccess
+                        Consumer {
+                            loading = false
+                            view?.hideLoading()
+                            view?.showFragments()
+                            view?.refreshMenu()
+                            view?.showCitiesWeather(it.cities)
+                        },
+                        //onError
+                        Consumer {
+                            loading = false
+                            view?.hideLoading()
+                            view?.showError(it)
+                        })
+
+            }
         }
 
     }

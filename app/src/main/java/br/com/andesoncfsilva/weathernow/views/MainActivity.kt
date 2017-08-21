@@ -140,8 +140,10 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         EventBus.getDefault().post(HideLoading())
     }
 
-    override fun showError(e: Throwable) {
-        Snackbar.make(findViewById(android.R.id.content), errorMessageFactory.create(e), Snackbar.LENGTH_LONG).show()
+    override fun showError(e: Throwable?) {
+        e?.let {
+            Snackbar.make(findViewById(android.R.id.content), errorMessageFactory.create(e), Snackbar.LENGTH_LONG).show()
+        }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

@@ -12,9 +12,9 @@ import com.google.android.gms.location.LocationRequest
  */
 object MockHelper {
 
-    val latitude: Double = 1.0
+    val latitude: Double = 0.0
 
-    val longitude: Double = 1.0
+    val longitude: Double = 0.0
 
     val unitTemp: UnitTemp = UnitTemp.CELSIUS
 
@@ -26,7 +26,7 @@ object MockHelper {
 
     val openMapIconUrl: String = "http://www.openMapUrl.com/icon.png"
 
-    val geoBox: GeoBox = GeoBox(1.0, 1.0, 1.0, 1.0)
+    val geoBox: GeoBox = GeoBox(0.0, 0.0, 0.0, 0.0)
 
     val cityWeather: CityWeather = CityWeather(
             id = city.id!!,
@@ -47,8 +47,8 @@ object MockHelper {
     val city: City
         get() {
             val weather = arrayListOf(Weather(description = "description", icon = "icon"))
-            val coord = Coord(lat = 1.0, lon = 1.0)
-            val main = Main(temp = 1.0, tempMax = 1.0, tempMin = 1.0)
+            val coord = Coord(lat = 0.0, lon = 0.0)
+            val main = Main(temp = 0.0, tempMax = 0.0, tempMin = 0.0)
             return City(id = 1, name = "name", coord = coord, main = main, weather = weather)
         }
 

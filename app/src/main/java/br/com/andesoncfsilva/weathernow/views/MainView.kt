@@ -12,7 +12,7 @@ interface MainView : MvpView {
     fun showLoading()
     fun hideLoading()
     fun hideFragments()
-    fun showError(e: Throwable)
+    fun showError(e: Throwable?)
     fun showCitiesWeather(cities: List<CityWeather>)
     fun showFragments()
     fun refreshMenu()

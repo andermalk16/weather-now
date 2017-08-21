@@ -37,6 +37,9 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/rxjava.properties'
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 
 }
 kapt {

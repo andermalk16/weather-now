@@ -43,8 +43,7 @@ class ListWeatherInteractorTest {
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        `when`(mockPostExecutionThread.scheduler).thenReturn(Schedulers.trampoline())
-        `when`(mockThreadExecutor.scheduler).thenReturn(Schedulers.trampoline())
+        setupMockReturns()
 
         interactor = ListWeatherInteractorImpl(
                 mockThreadExecutor,
@@ -55,16 +54,20 @@ class ListWeatherInteractorTest {
                 mockGeoCalculator)
     }
 
-    @Test
-    fun shouldExecuteInteractorWithoutErrorsInsideRange() {
-        var executeOk = false
-        var result: ListCitiesWeather? = null
-
+    private fun setupMockReturns() {
+        `when`(mockPostExecutionThread.scheduler).thenReturn(Schedulers.trampoline())
+        `when`(mockThreadExecutor.scheduler).thenReturn(Schedulers.trampoline())
         `when`(mockMapperCityWeather.convert(MockHelper.currentWeatherResponse, MockHelper.unitTemp)).thenReturn(MockHelper.citiesWeather)
         `when`(mockHardwareUtil.connected()).thenReturn(true)
         `when`(mockGeoCalculator.calculateBox(MockHelper.latitude, MockHelper.longitude)).thenReturn(MockHelper.geoBox)
         `when`(mockGeoCalculator.calculateDistance(MockHelper.cityWeather, MockHelper.latitude, MockHelper.longitude)).thenReturn(50000.0)
         `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenReturn(Observable.just(MockHelper.currentWeatherResponse))
+    }
+
+    @Test
+    fun shouldExecuteInteractorWithoutErrorsInsideRange() {
+        var executeOk = false
+        var result: ListCitiesWeather? = null
 
         interactor.execute(
                 MockHelper.unitTemp,
@@ -92,11 +95,7 @@ class ListWeatherInteractorTest {
         var executeOk = false
         var result: ListCitiesWeather? = null
 
-        `when`(mockMapperCityWeather.convert(MockHelper.currentWeatherResponse, MockHelper.unitTemp)).thenReturn(arrayListOf(MockHelper.cityWeather))
-        `when`(mockHardwareUtil.connected()).thenReturn(true)
-        `when`(mockGeoCalculator.calculateBox(MockHelper.latitude, MockHelper.longitude)).thenReturn(MockHelper.geoBox)
         `when`(mockGeoCalculator.calculateDistance(MockHelper.cityWeather, MockHelper.latitude, MockHelper.longitude)).thenReturn(51000.0)
-        `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenReturn(Observable.just(MockHelper.currentWeatherResponse))
 
         interactor.execute(
                 MockHelper.unitTemp,
@@ -114,7 +113,7 @@ class ListWeatherInteractorTest {
         verify(mockMapperCityWeather).convert(MockHelper.currentWeatherResponse, MockHelper.unitTemp)
         verify(mockHardwareUtil).connected()
         verify(mockGeoCalculator).calculateBox(MockHelper.latitude, MockHelper.longitude)
-        verify(mockGeoCalculator, times(2)).calculateDistance(MockHelper.cityWeather, MockHelper.latitude, MockHelper.longitude)
+        verify(mockGeoCalculator, times(MockHelper.citiesWeather.count() * 2)).calculateDistance(MockHelper.cityWeather, MockHelper.latitude, MockHelper.longitude)
         verify(mockWeatherApi).getCurrentWeather(any(), any(), any(), any(), any())
 
     }
@@ -145,15 +144,12 @@ class ListWeatherInteractorTest {
     }
 
     @Test
-    fun shouldThrowsSocketException() {
+    fun shouldThrowsRestAPIException() {
         var executeOk = false
         var result: ListCitiesWeather? = null
         var error: Throwable? = null
 
         `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenReturn(Observable.error(RestAPIException(RuntimeException())))
-        `when`(mockGeoCalculator.calculateBox(MockHelper.latitude, MockHelper.longitude)).thenReturn(MockHelper.geoBox)
-        `when`(mockHardwareUtil.connected()).thenReturn(true)
-
 
         interactor.execute(
                 MockHelper.unitTemp,

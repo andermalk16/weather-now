@@ -5,7 +5,6 @@ import android.location.Location
 import br.com.andesoncfsilva.weathernow.di.executors.PostExecutionThread
 import br.com.andesoncfsilva.weathernow.di.executors.ThreadExecutor
 import br.com.andesoncfsilva.weathernow.exception.GPSResolutionRequiredException
-import br.com.andesoncfsilva.weathernow.exception.NoGPSException
 import br.com.andesoncfsilva.weathernow.exception.NoPermissionException
 import br.com.andesoncfsilva.weathernow.interactors.LocationInteractor
 import br.com.andesoncfsilva.weathernow.interactors.LocationInteractorImpl
@@ -44,8 +43,7 @@ class LocationInteractorTest {
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        `when`(mockPostExecutionThread.scheduler).thenReturn(Schedulers.trampoline())
-        `when`(mockThreadExecutor.scheduler).thenReturn(Schedulers.trampoline())
+        setupMockReturns()
 
         mockLocationInteractor = LocationInteractorImpl(
                 mockThreadExecutor,
@@ -54,11 +52,9 @@ class LocationInteractorTest {
                 mockRxLocation)
     }
 
-    @Test
-    fun shouldExecuteInteractorWithoutErrors() {
-        var executeOk = false
-        var result: Location? = null
-
+    private fun setupMockReturns() {
+        `when`(mockPostExecutionThread.scheduler).thenReturn(Schedulers.trampoline())
+        `when`(mockThreadExecutor.scheduler).thenReturn(Schedulers.trampoline())
         `when`(mockRxPermission.request(Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_NETWORK_STATE,
@@ -68,6 +64,13 @@ class LocationInteractorTest {
         `when`(mockRxLocation.settings().checkAndHandleResolution(MockHelper.locationRequest)).thenReturn(Single.just(true))
         `when`(mockRxLocation.location()).thenReturn(mockFusedLocation)
         `when`(mockRxLocation.location().updates(MockHelper.locationRequest)).thenReturn(Observable.just(MockHelper.location))
+    }
+
+    @Test
+    fun shouldExecuteInteractorWithoutErrors() {
+        var executeOk = false
+        var result: Location? = null
+
 
         mockLocationInteractor.execute(
                 Consumer { executeOk = true; result = it },
@@ -76,7 +79,6 @@ class LocationInteractorTest {
         assertThat(executeOk).isTrue()
         assertThat(result).isNotNull()
         assertThat(result).isEqualTo(MockHelper.location)
-
 
         verify(mockRxPermission).request(Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION,
@@ -98,10 +100,6 @@ class LocationInteractorTest {
                 Manifest.permission.ACCESS_NETWORK_STATE,
                 Manifest.permission.INTERNET))
                 .thenReturn(Observable.just(false))
-        `when`(mockRxLocation.settings()).thenReturn(mockLocationSettings)
-        `when`(mockRxLocation.settings().checkAndHandleResolution(MockHelper.locationRequest)).thenReturn(Single.just(true))
-        `when`(mockRxLocation.location()).thenReturn(mockFusedLocation)
-        `when`(mockRxLocation.location().updates(MockHelper.locationRequest)).thenReturn(Observable.just(MockHelper.location))
 
         mockLocationInteractor.execute(
                 Consumer { executeOk = true; result = it },
@@ -110,7 +108,6 @@ class LocationInteractorTest {
         assertThat(executeOk).isFalse()
         assertThat(result).isNull()
         assertThat(error).isInstanceOf(NoPermissionException::class.java)
-
 
         verify(mockRxPermission).request(Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION,
@@ -126,15 +123,8 @@ class LocationInteractorTest {
         var result: Location? = null
         var error: Throwable? = null
 
-        `when`(mockRxPermission.request(Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_NETWORK_STATE,
-                Manifest.permission.INTERNET))
-                .thenReturn(Observable.just(true))
-        `when`(mockRxLocation.settings()).thenReturn(mockLocationSettings)
-        `when`(mockRxLocation.settings().checkAndHandleResolution(MockHelper.locationRequest)).thenReturn(Single.just(false))
-        `when`(mockRxLocation.location()).thenReturn(mockFusedLocation)
-        `when`(mockRxLocation.location().updates(MockHelper.locationRequest)).thenReturn(Observable.just(MockHelper.location))
+        `when`(mockRxLocation.settings().checkAndHandleResolution(MockHelper.locationRequest))
+                .thenReturn(Single.just(false))
 
         mockLocationInteractor.execute(
                 Consumer { executeOk = true; result = it },
@@ -143,7 +133,6 @@ class LocationInteractorTest {
         assertThat(executeOk).isFalse()
         assertThat(result).isNull()
         assertThat(error).isInstanceOf(GPSResolutionRequiredException::class.java)
-
 
         verify(mockRxPermission).request(Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION,
