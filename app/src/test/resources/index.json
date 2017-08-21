@@ -1,0 +1,3212 @@
+{
+  "cod": 200,
+  "calctime": 0.037199797,
+  "cnt": 89,
+  "list": [
+    {
+      "id": 3454061,
+      "dt": 1503273694,
+      "name": "Peruibe",
+      "coord": {
+        "Lat": -24.32,
+        "Lon": -46.998329
+      },
+      "main": {
+        "temp": 19.05,
+        "temp_min": 19.05,
+        "temp_max": 19.05,
+        "pressure": 1031.68,
+        "sea_level": 1031.69,
+        "grnd_level": 1031.68,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 13.41,
+        "deg": 204.5
+      },
+      "rain": {
+        "3h": 3.095
+      },
+      "snow": null,
+      "clouds": {
+        "today": 100
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "chuva moderada",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3460791,
+      "dt": 1503273898,
+      "name": "Itanhaem",
+      "coord": {
+        "Lat": -24.18306,
+        "Lon": -46.788891
+      },
+      "main": {
+        "temp": 16.95,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3456944,
+      "dt": 1503273851,
+      "name": "Mongagua",
+      "coord": {
+        "Lat": -24.09306,
+        "Lon": -46.620831
+      },
+      "main": {
+        "temp": 16.62,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3450563,
+      "dt": 1503273733,
+      "name": "Salto de Pirapora",
+      "coord": {
+        "Lat": -23.64889,
+        "Lon": -47.57333
+      },
+      "main": {
+        "temp": 15.6,
+        "temp_min": 15.6,
+        "temp_max": 15.6,
+        "pressure": 953.54,
+        "sea_level": 1031.69,
+        "grnd_level": 953.54,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 5.31,
+        "deg": 179.5
+      },
+      "rain": {
+        "3h": 7.24
+      },
+      "snow": null,
+      "clouds": {
+        "today": 92
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "chuva moderada",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3452779,
+      "dt": 1503273848,
+      "name": "Porto Feliz",
+      "coord": {
+        "Lat": -23.21472,
+        "Lon": -47.523891
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3453926,
+      "dt": 1503273898,
+      "name": "Piedade",
+      "coord": {
+        "Lat": -23.711941,
+        "Lon": -47.42778
+      },
+      "main": {
+        "temp": 14.3,
+        "temp_min": 14.3,
+        "temp_max": 14.3,
+        "pressure": 957.83,
+        "sea_level": 1033.19,
+        "grnd_level": 957.83,
+        "humidity": 98
+      },
+      "wind": {
+        "speed": 3.46,
+        "deg": 198
+      },
+      "rain": {
+        "3h": 10.85
+      },
+      "snow": null,
+      "clouds": {
+        "today": 92
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "chuva moderada",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3461528,
+      "dt": 1503273851,
+      "name": "Ibiuna",
+      "coord": {
+        "Lat": -23.656389,
+        "Lon": -47.2225
+      },
+      "main": {
+        "temp": 15.51,
+        "temp_min": 15,
+        "temp_max": 16,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "tempo nublado",
+          "icon": "04n"
+        }
+      ]
+    },
+    {
+      "id": 3444866,
+      "dt": 1503273850,
+      "name": "Votorantim",
+      "coord": {
+        "Lat": -23.546671,
+        "Lon": -47.437778
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3447399,
+      "dt": 1503273844,
+      "name": "Sorocaba",
+      "coord": {
+        "Lat": -23.501671,
+        "Lon": -47.458061
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3460535,
+      "dt": 1503273853,
+      "name": "Itu",
+      "coord": {
+        "Lat": -23.26417,
+        "Lon": -47.299171
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3458132,
+      "dt": 1503273898,
+      "name": "Mairinque",
+      "coord": {
+        "Lat": -23.54583,
+        "Lon": -47.183331
+      },
+      "main": {
+        "temp": 16.01,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3448300,
+      "dt": 1503273846,
+      "name": "Sao Roque",
+      "coord": {
+        "Lat": -23.529169,
+        "Lon": -47.135281
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3468592,
+      "dt": 1503273846,
+      "name": "Cabreuva",
+      "coord": {
+        "Lat": -23.307501,
+        "Lon": -47.132778
+      },
+      "main": {
+        "temp": 15.98,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3467197,
+      "dt": 1503273852,
+      "name": "Capivari",
+      "coord": {
+        "Lat": -22.995001,
+        "Lon": -47.507778
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3461055,
+      "dt": 1503273851,
+      "name": "Iracemapolis",
+      "coord": {
+        "Lat": -22.580561,
+        "Lon": -47.518608
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3450594,
+      "dt": 1503273844,
+      "name": "Salto",
+      "coord": {
+        "Lat": -23.20083,
+        "Lon": -47.286942
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3456827,
+      "dt": 1503273845,
+      "name": "Monte Mor",
+      "coord": {
+        "Lat": -22.946671,
+        "Lon": -47.31583
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3461311,
+      "dt": 1503273845,
+      "name": "Indaiatuba",
+      "coord": {
+        "Lat": -23.090281,
+        "Lon": -47.21806
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3461655,
+      "dt": 1503273844,
+      "name": "Hortolandia",
+      "coord": {
+        "Lat": -22.85833,
+        "Lon": -47.220001
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3450404,
+      "dt": 1503273855,
+      "name": "Santa Barbara dOeste",
+      "coord": {
+        "Lat": -22.753611,
+        "Lon": -47.413609
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3456138,
+      "dt": 1503273844,
+      "name": "Nova Odessa",
+      "coord": {
+        "Lat": -22.7775,
+        "Lon": -47.29583
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3472343,
+      "dt": 1503273845,
+      "name": "Americana",
+      "coord": {
+        "Lat": -22.73917,
+        "Lon": -47.33139
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3447259,
+      "dt": 1503273897,
+      "name": "Sumare",
+      "coord": {
+        "Lat": -22.821939,
+        "Lon": -47.266941
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3454690,
+      "dt": 1503273846,
+      "name": "Paulinia",
+      "coord": {
+        "Lat": -22.76111,
+        "Lon": -47.154171
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3465320,
+      "dt": 1503273850,
+      "name": "Cosmopolis",
+      "coord": {
+        "Lat": -22.64583,
+        "Lon": -47.19611
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3471395,
+      "dt": 1503273845,
+      "name": "Artur Nogueira",
+      "coord": {
+        "Lat": -22.573059,
+        "Lon": -47.172501
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3464304,
+      "dt": 1503273853,
+      "name": "Embu Guacu",
+      "coord": {
+        "Lat": -23.83222,
+        "Lon": -46.81139
+      },
+      "main": {
+        "temp": 16.53,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3460748,
+      "dt": 1503273853,
+      "name": "Itapecerica da Serra",
+      "coord": {
+        "Lat": -23.71694,
+        "Lon": -46.849171
+      },
+      "main": {
+        "temp": 16.54,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3464305,
+      "dt": 1503273846,
+      "name": "Embu",
+      "coord": {
+        "Lat": -23.64889,
+        "Lon": -46.852219
+      },
+      "main": {
+        "temp": 16.55,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3465284,
+      "dt": 1503273733,
+      "name": "Cotia",
+      "coord": {
+        "Lat": -23.603889,
+        "Lon": -46.91917
+      },
+      "main": {
+        "temp": 15.68,
+        "temp_min": 15,
+        "temp_max": 16,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "tempo nublado",
+          "icon": "04n"
+        }
+      ]
+    },
+    {
+      "id": 3447186,
+      "dt": 1503273853,
+      "name": "Taboao da Serra",
+      "coord": {
+        "Lat": -23.62611,
+        "Lon": -46.791672
+      },
+      "main": {
+        "temp": 16.55,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3460718,
+      "dt": 1503273845,
+      "name": "Itapevi",
+      "coord": {
+        "Lat": -23.548889,
+        "Lon": -46.93417
+      },
+      "main": {
+        "temp": 16.02,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3460170,
+      "dt": 1503273845,
+      "name": "Jandira",
+      "coord": {
+        "Lat": -23.5275,
+        "Lon": -46.9025
+      },
+      "main": {
+        "temp": 16.02,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3470353,
+      "dt": 1503273845,
+      "name": "Barueri",
+      "coord": {
+        "Lat": -23.510559,
+        "Lon": -46.87611
+      },
+      "main": {
+        "temp": 16.02,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3449948,
+      "dt": 1503273853,
+      "name": "Santana de Parnaiba",
+      "coord": {
+        "Lat": -23.44417,
+        "Lon": -46.917782
+      },
+      "main": {
+        "temp": 16.01,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3466998,
+      "dt": 1503273898,
+      "name": "Carapicuiba",
+      "coord": {
+        "Lat": -23.522499,
+        "Lon": -46.83556
+      },
+      "main": {
+        "temp": 16.02,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3455775,
+      "dt": 1503273844,
+      "name": "Osasco",
+      "coord": {
+        "Lat": -23.532499,
+        "Lon": -46.791672
+      },
+      "main": {
+        "temp": 16.64,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        },
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3468158,
+      "dt": 1503273898,
+      "name": "Cajamar",
+      "coord": {
+        "Lat": -23.35611,
+        "Lon": -46.876942
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3445446,
+      "dt": 1503273853,
+      "name": "Varzea Paulista",
+      "coord": {
+        "Lat": -23.21139,
+        "Lon": -46.828331
+      },
+      "main": {
+        "temp": 15.99,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3464739,
+      "dt": 1503273844,
+      "name": "Diadema",
+      "coord": {
+        "Lat": -23.68611,
+        "Lon": -46.62278
+      },
+      "main": {
+        "temp": 16.54,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3465059,
+      "dt": 1503273846,
+      "name": "Cubatao",
+      "coord": {
+        "Lat": -23.895,
+        "Lon": -46.425282
+      },
+      "main": {
+        "temp": 16.46,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3449344,
+      "dt": 1503273853,
+      "name": "Sao Bernardo do Campo",
+      "coord": {
+        "Lat": -23.69389,
+        "Lon": -46.564999
+      },
+      "main": {
+        "temp": 16.53,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3449701,
+      "dt": 1503273897,
+      "name": "Santo Andre",
+      "coord": {
+        "Lat": -23.663891,
+        "Lon": -46.53833
+      },
+      "main": {
+        "temp": 16.53,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3449324,
+      "dt": 1503273845,
+      "name": "Sao Caetano do Sul",
+      "coord": {
+        "Lat": -23.62306,
+        "Lon": -46.551109
+      },
+      "main": {
+        "temp": 16.54,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3457381,
+      "dt": 1503273845,
+      "name": "Maua",
+      "coord": {
+        "Lat": -23.66778,
+        "Lon": -46.461391
+      },
+      "main": {
+        "temp": 16.52,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3451329,
+      "dt": 1503273898,
+      "name": "Ribeirao Pires",
+      "coord": {
+        "Lat": -23.71056,
+        "Lon": -46.41333
+      },
+      "main": {
+        "temp": 16.5,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1021,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 3.6,
+        "deg": 200
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3448439,
+      "dt": 1503273771,
+      "name": "Sao Paulo",
+      "coord": {
+        "Lat": -23.547501,
+        "Lon": -46.636108
+      },
+      "main": {
+        "temp": 16.56,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3468215,
+      "dt": 1503273845,
+      "name": "Caieiras",
+      "coord": {
+        "Lat": -23.36417,
+        "Lon": -46.740559
+      },
+      "main": {
+        "temp": 16.01,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3462964,
+      "dt": 1503273845,
+      "name": "Franco da Rocha",
+      "coord": {
+        "Lat": -23.321671,
+        "Lon": -46.72694
+      },
+      "main": {
+        "temp": 16.01,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3462980,
+      "dt": 1503273898,
+      "name": "Francisco Morato",
+      "coord": {
+        "Lat": -23.28167,
+        "Lon": -46.745281
+      },
+      "main": {
+        "temp": 16.01,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 87
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 290
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3458131,
+      "dt": 1503273844,
+      "name": "Mairipora",
+      "coord": {
+        "Lat": -23.318609,
+        "Lon": -46.58667
+      },
+      "main": {
+        "temp": 16.02,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3461786,
+      "dt": 1503273844,
+      "name": "Guarulhos",
+      "coord": {
+        "Lat": -23.46278,
+        "Lon": -46.533329
+      },
+      "main": {
+        "temp": 16.55,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3460516,
+      "dt": 1503273857,
+      "name": "Itupeva",
+      "coord": {
+        "Lat": -23.153061,
+        "Lon": -47.057781
+      },
+      "main": {
+        "temp": 15.97,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3458406,
+      "dt": 1503273850,
+      "name": "Louveira",
+      "coord": {
+        "Lat": -23.08639,
+        "Lon": -46.950562
+      },
+      "main": {
+        "temp": 15.97,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3445014,
+      "dt": 1503273846,
+      "name": "Vinhedo",
+      "coord": {
+        "Lat": -23.02972,
+        "Lon": -46.975281
+      },
+      "main": {
+        "temp": 16.29,
+        "temp_min": 16,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3467865,
+      "dt": 1503273844,
+      "name": "Campinas",
+      "coord": {
+        "Lat": -22.90556,
+        "Lon": -47.060829
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3445578,
+      "dt": 1503273844,
+      "name": "Valinhos",
+      "coord": {
+        "Lat": -22.97056,
+        "Lon": -46.995831
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3459462,
+      "dt": 1503273844,
+      "name": "Jundiai",
+      "coord": {
+        "Lat": -23.18639,
+        "Lon": -46.884171
+      },
+      "main": {
+        "temp": 15.99,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3460598,
+      "dt": 1503273850,
+      "name": "Itatiba",
+      "coord": {
+        "Lat": -23.005831,
+        "Lon": -46.83889
+      },
+      "main": {
+        "temp": 16.31,
+        "temp_min": 16,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3460200,
+      "dt": 1503273844,
+      "name": "Jaguariuna",
+      "coord": {
+        "Lat": -22.705561,
+        "Lon": -46.985828
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3454407,
+      "dt": 1503273845,
+      "name": "Pedreira",
+      "coord": {
+        "Lat": -22.74194,
+        "Lon": -46.90139
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3472311,
+      "dt": 1503273845,
+      "name": "Amparo",
+      "coord": {
+        "Lat": -22.701111,
+        "Lon": -46.764439
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3449518,
+      "dt": 1503273854,
+      "name": "Santo Antonio de Posse",
+      "coord": {
+        "Lat": -22.60611,
+        "Lon": -46.919441
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3460068,
+      "dt": 1503273845,
+      "name": "Jarinu",
+      "coord": {
+        "Lat": -23.101391,
+        "Lon": -46.728329
+      },
+      "main": {
+        "temp": 15.99,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3471335,
+      "dt": 1503273899,
+      "name": "Atibaia",
+      "coord": {
+        "Lat": -23.11694,
+        "Lon": -46.550282
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 15,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3469092,
+      "dt": 1503273898,
+      "name": "Braganca Paulista",
+      "coord": {
+        "Lat": -22.951941,
+        "Lon": -46.541939
+      },
+      "main": {
+        "temp": 16.33,
+        "temp_min": 16,
+        "temp_max": 17,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3447718,
+      "dt": 1503273853,
+      "name": "Serra Negra",
+      "coord": {
+        "Lat": -22.612221,
+        "Lon": -46.700562
+      },
+      "main": {
+        "temp": 17,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1019,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1.5,
+        "deg": 70
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 75
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3447437,
+      "dt": 1503273845,
+      "name": "Socorro",
+      "coord": {
+        "Lat": -22.591391,
+        "Lon": -46.528889
+      },
+      "main": {
+        "temp": 17.45,
+        "temp_min": 17.45,
+        "temp_max": 17.45,
+        "pressure": 937.65,
+        "sea_level": 1030.56,
+        "grnd_level": 937.65,
+        "humidity": 94
+      },
+      "wind": {
+        "speed": 3.11,
+        "deg": 296.5
+      },
+      "rain": {
+        "3h": 0.165
+      },
+      "snow": null,
+      "clouds": {
+        "today": 92
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3452465,
+      "dt": 1503273850,
+      "name": "Praia Grande",
+      "coord": {
+        "Lat": -24.005831,
+        "Lon": -46.402779
+      },
+      "main": {
+        "temp": 16.44,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3448136,
+      "dt": 1503273845,
+      "name": "Sao Vicente",
+      "coord": {
+        "Lat": -23.96306,
+        "Lon": -46.391941
+      },
+      "main": {
+        "temp": 16.44,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3449433,
+      "dt": 1503273844,
+      "name": "Santos",
+      "coord": {
+        "Lat": -23.960831,
+        "Lon": -46.333611
+      },
+      "main": {
+        "temp": 16.43,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3461789,
+      "dt": 1503273846,
+      "name": "Guaruja",
+      "coord": {
+        "Lat": -23.993059,
+        "Lon": -46.25639
+      },
+      "main": {
+        "temp": 16.42,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3451134,
+      "dt": 1503273897,
+      "name": "Rio Grande da Serra",
+      "coord": {
+        "Lat": -23.744169,
+        "Lon": -46.398331
+      },
+      "main": {
+        "temp": 16.49,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3470052,
+      "dt": 1503273846,
+      "name": "Bertioga",
+      "coord": {
+        "Lat": -23.854441,
+        "Lon": -46.138611
+      },
+      "main": {
+        "temp": 16.44,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1018,
+        "humidity": 82
+      },
+      "wind": {
+        "speed": 2.6,
+        "deg": 330
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3463422,
+      "dt": 1503273853,
+      "name": "Ferraz de Vasconcelos",
+      "coord": {
+        "Lat": -23.540831,
+        "Lon": -46.36861
+      },
+      "main": {
+        "temp": 16.41,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        },
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3453406,
+      "dt": 1503273844,
+      "name": "Poa",
+      "coord": {
+        "Lat": -23.528061,
+        "Lon": -46.344719
+      },
+      "main": {
+        "temp": 16.41,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        },
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3460644,
+      "dt": 1503273845,
+      "name": "Itaquaquecetuba",
+      "coord": {
+        "Lat": -23.486111,
+        "Lon": -46.348331
+      },
+      "main": {
+        "temp": 16.41,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        },
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3471393,
+      "dt": 1503273764,
+      "name": "Aruja",
+      "coord": {
+        "Lat": -23.396111,
+        "Lon": -46.320831
+      },
+      "main": {
+        "temp": 16.42,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        },
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3447212,
+      "dt": 1503273897,
+      "name": "Suzano",
+      "coord": {
+        "Lat": -23.5425,
+        "Lon": -46.310829
+      },
+      "main": {
+        "temp": 16.41,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        },
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3457001,
+      "dt": 1503273898,
+      "name": "Mogi das Cruzes",
+      "coord": {
+        "Lat": -23.522779,
+        "Lon": -46.188332
+      },
+      "main": {
+        "temp": 16.4,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        },
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3450188,
+      "dt": 1503273897,
+      "name": "Santa Isabel",
+      "coord": {
+        "Lat": -23.315559,
+        "Lon": -46.22139
+      },
+      "main": {
+        "temp": 16.42,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        },
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3469984,
+      "dt": 1503273854,
+      "name": "Biritiba Mirim",
+      "coord": {
+        "Lat": -23.5725,
+        "Lon": -46.038609
+      },
+      "main": {
+        "temp": 16.39,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 230
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        },
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3461871,
+      "dt": 1503273845,
+      "name": "Guararema",
+      "coord": {
+        "Lat": -23.415001,
+        "Lon": -46.035
+      },
+      "main": {
+        "temp": 16.41,
+        "temp_min": 15,
+        "temp_max": 19,
+        "pressure": 1020,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 230
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        },
+        {
+          "id": 300,
+          "main": "Drizzle",
+          "description": "garoa fraca",
+          "icon": "09n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    },
+    {
+      "id": 3460370,
+      "dt": 1503273844,
+      "name": "Jacarei",
+      "coord": {
+        "Lat": -23.305281,
+        "Lon": -45.965832
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 16,
+        "temp_max": 16,
+        "pressure": 1020,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 230
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3453661,
+      "dt": 1503273855,
+      "name": "Piracaia",
+      "coord": {
+        "Lat": -23.05389,
+        "Lon": -46.358059
+      },
+      "main": {
+        "temp": 15.74,
+        "temp_min": 15,
+        "temp_max": 16,
+        "pressure": 1020,
+        "humidity": 100
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 360
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3468023,
+      "dt": 1503273898,
+      "name": "Camanducaia",
+      "coord": {
+        "Lat": -22.75528,
+        "Lon": -46.144718
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 16,
+        "temp_max": 16,
+        "pressure": 1020,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 230
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3467956,
+      "dt": 1503273854,
+      "name": "Cambui",
+      "coord": {
+        "Lat": -22.612221,
+        "Lon": -46.057499
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 16,
+        "temp_max": 16,
+        "pressure": 1020,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 230
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3448636,
+      "dt": 1503273844,
+      "name": "Sao Jose dos Campos",
+      "coord": {
+        "Lat": -23.17944,
+        "Lon": -45.88694
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 16,
+        "temp_max": 16,
+        "pressure": 1020,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 230
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        }
+      ]
+    },
+    {
+      "id": 3468562,
+      "dt": 1503273849,
+      "name": "Cacapava",
+      "coord": {
+        "Lat": -23.10083,
+        "Lon": -45.70694
+      },
+      "main": {
+        "temp": 16,
+        "temp_min": 16,
+        "temp_max": 16,
+        "pressure": 1020,
+        "humidity": 93
+      },
+      "wind": {
+        "speed": 1,
+        "deg": 230
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "today": 90
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "chuva fraca",
+          "icon": "10n"
+        },
+        {
+          "id": 701,
+          "main": "Mist",
+          "description": "névoa",
+          "icon": "50n"
+        }
+      ]
+    }
+  ]
+}

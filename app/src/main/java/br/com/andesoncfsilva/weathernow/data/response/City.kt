@@ -3,22 +3,20 @@ package br.com.andesoncfsilva.weathernow.data.response
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class City {
+data class City (
 
     @SerializedName("id")
     @Expose
-    var id: Int? = null
+    var id: Int? = null,
     @SerializedName("name")
     @Expose
-    var name: String? = null
+    var name: String? = null,
     @SerializedName("coord")
     @Expose
-    var coord: Coord? = null
+    var coord: Coord? = null,
     @SerializedName("main")
     @Expose
-    var main: Main? = null
+    var main: Main? = null,
     @SerializedName("weather")
     @Expose
-    var weather: List<Weather>? = null
-
-}
+    var weather: List<Weather>? = null)

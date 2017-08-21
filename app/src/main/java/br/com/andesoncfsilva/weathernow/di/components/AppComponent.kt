@@ -8,6 +8,7 @@ import br.com.andesoncfsilva.weathernow.data.WeatherApi
 import br.com.andesoncfsilva.weathernow.di.executors.PostExecutionThread
 import br.com.andesoncfsilva.weathernow.di.executors.ThreadExecutor
 import br.com.andesoncfsilva.weathernow.di.modules.AppModule
+import br.com.andesoncfsilva.weathernow.utils.GeoCalculator
 import br.com.andesoncfsilva.weathernow.utils.HardwareUtil
 import br.com.andesoncfsilva.weathernow.utils.OpenWeatherMapUtil
 import com.google.gson.Gson
@@ -36,5 +37,6 @@ interface AppComponent {
     fun weatherApi(): WeatherApi
     fun openWeatherMapApiKey(): OpenWeatherMapUtil
     fun hardwareUtil(): HardwareUtil
+    fun geoCalculator(): GeoCalculator
     fun mapperCityWeather(): MapperCityWeather
 }

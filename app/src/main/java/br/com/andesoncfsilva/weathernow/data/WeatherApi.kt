@@ -13,11 +13,11 @@ import javax.inject.Inject
 class WeatherApiImpl @Inject constructor(private val api: RestApi,
                                          private val openWeatherMapUtil: OpenWeatherMapUtil) : WeatherApi {
 
-    override fun getCurrentWeather(unitTemp: UnitTemp,
-                                   lon_left: Double,
-                                   lat_bottom: Double,
-                                   lon_right: Double,
-                                   lat_top: Double
+    override fun getCurrentWeather(unitTemp: UnitTemp?,
+                                   lon_left: Double?,
+                                   lat_bottom: Double?,
+                                   lon_right: Double?,
+                                   lat_top: Double?
     ): Observable<CurrentWeatherResponse> {
         val units = if (unitTemp == UnitTemp.CELSIUS) "metric" else "imperial"
         return api.getCurrentWeather(
@@ -28,9 +28,9 @@ class WeatherApiImpl @Inject constructor(private val api: RestApi,
 }
 
 interface WeatherApi {
-    fun getCurrentWeather(unitTemp: UnitTemp,
-                          lon_left: Double,
-                          lat_bottom: Double,
-                          lon_right: Double,
-                          lat_top: Double): Observable<CurrentWeatherResponse>
+    fun getCurrentWeather(unitTemp: UnitTemp?,
+                          lon_left: Double?,
+                          lat_bottom: Double?,
+                          lon_right: Double?,
+                          lat_top: Double?): Observable<CurrentWeatherResponse>
 }

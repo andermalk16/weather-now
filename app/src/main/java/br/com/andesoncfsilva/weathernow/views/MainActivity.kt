@@ -45,6 +45,9 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         setupFragment()
+        if (checkPlayServicesAvailable()) {
+            presenter?.setDefaultCameraPosition()
+        }
     }
 
     override fun onStart() {
@@ -57,13 +60,6 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
         super.onStop()
         if (EventBus.getDefault().isRegistered(this))
             EventBus.getDefault().unregister(this)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        if (checkPlayServicesAvailable()) {
-            presenter?.setDefaultCameraPosition()
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -37,6 +37,7 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/rxjava.properties'
     }
+
 }
 kapt {
     generateStubs = true
@@ -75,11 +76,16 @@ dependencies {
     compile 'com.daimajia.easing:library:2.0@aar'
     compile 'com.daimajia.androidanimations:library:2.3@aar'
 
+
+    testCompile "org.robolectric:robolectric:3.4.2"
+    testCompile "org.mockito:mockito-core:2.+"
+    testCompile 'org.assertj:assertj-core:3.8.0'
     testCompile 'junit:junit:4.12'
     kapt 'com.google.dagger:dagger-compiler:2.5'
 }
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 apply plugin: 'com.google.gms.google-services'
