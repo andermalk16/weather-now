@@ -18,9 +18,11 @@ object MockHelper {
 
     val openMapKey: String = "openMapKey"
 
-    val openMapUrl: String = "openMapUrl"
+    val openMapUrl: String = "http://www.openMapUrl.com"
 
     val openMapIconCode: String = "openMapIconCode"
+
+    val openMapIconUrl: String = "http://www.openMapUrl.com/icon.png"
 
     val geoBox: GeoBox = GeoBox(1.0, 1.0, 1.0, 1.0)
 
@@ -38,6 +40,8 @@ object MockHelper {
             distance = 0.0
     )
 
+    val citiesWeather : List<CityWeather> = arrayListOf(cityWeather.copy(), cityWeather.copy(), cityWeather.copy(), cityWeather.copy())
+
     val city: City
         get() {
             val weather = arrayListOf(Weather(description = "description", icon = "icon"))
@@ -48,7 +52,7 @@ object MockHelper {
 
     val currentWeatherResponse: CurrentWeatherResponse
         get() {
-            val list = arrayListOf(city)
+            val list = arrayListOf(city.copy(), city.copy(), city.copy(), city.copy())
             return CurrentWeatherResponse(city = list, cnt = list.count())
         }
 

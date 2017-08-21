@@ -25,7 +25,8 @@ class MapperCityWeatherImpl @Inject constructor(val openWeatherMapUtil: OpenWeat
                     maxTemperature = city.main?.tempMax!!,
                     minTemperature = city.main?.tempMin!!,
                     unit = unitTemp,
-                    distance = 0.0
+                    distance = 0.0,
+                    userDistance = 0.0
             )
         }
     }

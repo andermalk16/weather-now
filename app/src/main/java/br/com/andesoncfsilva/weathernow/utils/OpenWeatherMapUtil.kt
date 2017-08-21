@@ -11,7 +11,7 @@ import javax.inject.Inject
  */
 class OpenWeatherMapUtilImpl : OpenWeatherMapUtil {
 
-    override fun getUrlIcon(code: String): String {
+    override fun getUrlIcon(code: String?): String {
         return "${BuildConfig.OPEN_WEATHER_MAP_URL_IMAGE}$code.png"
     }
 
@@ -22,5 +22,5 @@ class OpenWeatherMapUtilImpl : OpenWeatherMapUtil {
 
 interface OpenWeatherMapUtil {
     fun getKey(): String
-    fun getUrlIcon(code: String): String
+    fun getUrlIcon(code: String?): String
 }
