@@ -158,7 +158,7 @@ class ListWeatherInteractorTest {
         var result: ListCitiesWeather? = null
         var error: Throwable? = null
 
-        `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenThrow(RestAPIException(RuntimeException()))
+        `when`(mockWeatherApi.getCurrentWeather(any(), any(), any(), any(), any())).thenReturn(Observable.error(RestAPIException(RuntimeException())))
         `when`(mockGeoCalculator.calculateBox(MockHelper.latitude, MockHelper.longitude)).thenReturn(MockHelper.geoBox)
         `when`(mockHardwareUtil.connected()).thenReturn(true)
 
@@ -177,5 +177,8 @@ class ListWeatherInteractorTest {
         assertThat(error).isInstanceOf(RestAPIException::class.java)
 
         verify(mockHardwareUtil).connected()
+        verify(mockGeoCalculator).calculateBox(MockHelper.latitude, MockHelper.longitude)
+        verify(mockWeatherApi).getCurrentWeather(any(), any(), any(), any(), any())
+
     }
 }
