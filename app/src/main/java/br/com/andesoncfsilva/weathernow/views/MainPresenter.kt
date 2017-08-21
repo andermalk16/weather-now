@@ -36,7 +36,10 @@ class MainPresenter @Inject constructor(private val listWeatherInteractor: ListW
                     view?.setCameraPosition(it.latitude, it.longitude)
                 },
                 //onError
-                Consumer { view?.hideLoading() })
+                Consumer {
+                    view?.hideLoading()
+                    view?.showError(it)
+                })
     }
 
     fun getWeatherList(unitTemp: UnitTemp, latitude: Double, longitude: Double) {
@@ -54,6 +57,7 @@ class MainPresenter @Inject constructor(private val listWeatherInteractor: ListW
                     Consumer {
                         loading = false
                         view?.hideLoading()
+                        view?.showError(it)
                     })
         }
 
