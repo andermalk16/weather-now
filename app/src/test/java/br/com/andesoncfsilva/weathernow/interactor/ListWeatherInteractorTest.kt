@@ -6,6 +6,7 @@ import br.com.andesoncfsilva.weathernow.data.WeatherApi
 import br.com.andesoncfsilva.weathernow.di.executors.PostExecutionThread
 import br.com.andesoncfsilva.weathernow.di.executors.ThreadExecutor
 import br.com.andesoncfsilva.weathernow.entities.ListCitiesWeather
+import br.com.andesoncfsilva.weathernow.exception.NoConnectionException
 import br.com.andesoncfsilva.weathernow.interactors.ListWeatherInteractor
 import br.com.andesoncfsilva.weathernow.interactors.ListWeatherInteractorImpl
 import br.com.andesoncfsilva.weathernow.util.MockHelper
@@ -89,6 +90,31 @@ class ListWeatherInteractorTest {
         verify(mockGeoCalculator).calculateBox(MockHelper.latitude, MockHelper.longitude)
         verify(mockGeoCalculator, times(2)).calculateDistance(MockHelper.cityWeather, MockHelper.latitude, MockHelper.longitude)
         verify(mockWeatherApi).getCurrentWeather(any(), any(), any(), any(), any())
+
+    }
+
+    @Test
+    fun shouldThrowsNoConnection() {
+        var executeOk = false
+        var result: ListCitiesWeather? = null
+        var error: Throwable? = null
+
+        `when`(mockHardwareUtil.connected()).thenReturn(false)
+
+        interactor.execute(
+                MockHelper.unitTemp,
+                MockHelper.latitude,
+                MockHelper.longitude,
+                MockHelper.latitude,
+                MockHelper.longitude,
+                Consumer { executeOk = true; result = it },
+                Consumer { error = it })
+
+        assertThat(executeOk).isFalse()
+        assertThat(result).isNull()
+        assertThat(error is NoConnectionException).isTrue()
+
+        verify(mockHardwareUtil).connected()
 
     }
 }

@@ -41,13 +41,13 @@ import javax.inject.Singleton
     @Provides @Singleton fun provideOkhttpClient(context: Context): OkHttpClient {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
-        val timeout: Long = 5
+        val timeout: Long = 30
         val client = OkHttpClient.Builder()
 
         client.networkInterceptors().add(logging)
-        client.connectTimeout(timeout, TimeUnit.MINUTES)
-        client.writeTimeout(timeout, TimeUnit.MINUTES)
-        client.readTimeout(timeout, TimeUnit.MINUTES)
+        client.connectTimeout(timeout, TimeUnit.SECONDS)
+        client.writeTimeout(timeout, TimeUnit.SECONDS)
+        client.readTimeout(timeout, TimeUnit.SECONDS)
 
         return client.build()
     }
