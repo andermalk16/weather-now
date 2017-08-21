@@ -20,11 +20,11 @@ class WeatherApiImpl @Inject constructor(private val api: RestApi,
                                    lon_right: Double?,
                                    lat_top: Double?
     ): Observable<CurrentWeatherResponse> {
-        val units = if (unitTemp == UnitTemp.CELSIUS) "metric" else "imperial"
         return api.getCurrentWeather(
                 openWeatherMapUtil.getKey(),
                 "$lon_left,$lat_bottom,$lon_right,$lat_top,100",
-                units)
+                unitTemp.toString(),
+                "pt")
                 .doOnError { throw RestAPIException(it) }
     }
 }

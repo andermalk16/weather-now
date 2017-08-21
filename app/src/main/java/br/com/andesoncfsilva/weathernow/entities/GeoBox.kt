@@ -6,4 +6,8 @@ package br.com.andesoncfsilva.weathernow.entities
 data class GeoBox(val latitudeMax: Double,
                   val latitudeMin: Double,
                   val longitudeMax: Double,
-                  val longitudeMin: Double)
+                  val longitudeMin: Double){
+    override fun toString(): String {
+        return "$longitudeMin,$latitudeMin,$longitudeMax,$latitudeMax,100"
+    }
+}

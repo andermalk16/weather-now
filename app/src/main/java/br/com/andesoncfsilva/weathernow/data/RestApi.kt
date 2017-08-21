@@ -16,7 +16,7 @@ interface RestApi {
             @Query("appid") apiKey: String,
             @Query("bbox") bbox: String,
             @Query("units") units: String,
-            @Query("lang") lang: String = "pt"
+            @Query("lang") lang: String
     ): Observable<CurrentWeatherResponse>
 
 }
