@@ -12,11 +12,11 @@ import javax.inject.Inject
 class OpenWeatherMapUtilImpl : OpenWeatherMapUtil {
 
     override fun getUrlIcon(code: String?): String {
-        return "${BuildConfig.OPEN_WEATHER_MAP_URL_IMAGE}$code.png"
+        return "${RemoteConfig.OPEN_WEATHER_MAP_URL_IMAGE}$code.png"
     }
 
     override fun getKey(): String {
-        return BuildConfig.OPEN_WEATHER_MAP_KEY
+        return RemoteConfig.OPEN_WEATHER_MAP_KEY
     }
 }
 

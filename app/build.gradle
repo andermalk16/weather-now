@@ -13,18 +13,11 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        debug{
-            buildConfigField "String", "OPEN_WEATHER_MAP_KEY", '"7630d535fa7fecfd437c06b488a279ee"'
-            buildConfigField "String", "OPEN_WEATHER_MAP_URL_IMAGE", '"http://openweathermap.org/img/w/"'
-            buildConfigField "String", "OPEN_WEATHER_MAP_URL", '"http://api.openweathermap.org"'
-        }
         release {
-            buildConfigField "String", "OPEN_WEATHER_MAP_KEY", '"7630d535fa7fecfd437c06b488a279ee"'
-            buildConfigField "String", "OPEN_WEATHER_MAP_URL_IMAGE", '"http://openweathermap.org/img/w/"'
-            buildConfigField "String", "OPEN_WEATHER_MAP_URL", '"http://api.openweathermap.org"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -47,6 +40,10 @@ kapt {
 }
 
 dependencies {
+
+    def android_support_version = '25.3.1'
+    def google_android_firebase = '10.2.1'
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -54,11 +51,16 @@ dependencies {
 
 
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    compile 'com.android.support:multidex:1.0.1'
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
+
+    compile "com.android.support:appcompat-v7:$android_support_version"
+    compile "com.android.support:support-v4:$android_support_version"
+    compile "com.android.support:design:$android_support_version"
+    compile "com.android.support:cardview-v7:$android_support_version"
+    compile "com.android.support:recyclerview-v7:$android_support_version"
+
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.google.dagger:dagger:2.5'
@@ -70,18 +72,16 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.jakewharton.timber:timber:4.5.1'
     compile 'com.patloew.rxlocation:rxlocation:1.0.3'
-    compile 'com.google.android.gms:play-services-location:10.2.1'
-    compile 'com.google.android.gms:play-services-places:10.2.1'
+    compile "com.google.android.gms:play-services-location:$google_android_firebase"
+    compile "com.google.android.gms:play-services-places:$google_android_firebase"
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.google.firebase:firebase-crash:10.2.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile "com.google.firebase:firebase-crash:$google_android_firebase"
+    compile "com.google.firebase:firebase-config:$google_android_firebase"
     compile 'com.daimajia.easing:library:2.0@aar'
     compile 'com.daimajia.androidanimations:library:2.3@aar'
-
-
-    testCompile "org.robolectric:robolectric:3.4.2"
-    testCompile "org.mockito:mockito-core:2.+"
+    testCompile 'org.robolectric:robolectric:3.4.2'
+    testCompile 'org.mockito:mockito-core:2.+'
     testCompile 'org.assertj:assertj-core:3.8.0'
     testCompile 'junit:junit:4.12'
     kapt 'com.google.dagger:dagger-compiler:2.5'

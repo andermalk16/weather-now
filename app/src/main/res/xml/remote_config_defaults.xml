@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>OPEN_WEATHER_MAP_KEY</key>
+        <value>7630d535fa7fecfd437c06b488a279ee</value>
+    </entry>
+    <entry>
+        <key>OPEN_WEATHER_MAP_URL</key>
+        <value>http://api.openweathermap.org</value>
+    </entry>
+    <entry>
+        <key>OPEN_WEATHER_MAP_URL_IMAGE</key>
+        <value>http://openweathermap.org/img/w/</value>
+    </entry>
+</defaultsMap>

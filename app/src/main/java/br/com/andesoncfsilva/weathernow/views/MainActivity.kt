@@ -9,6 +9,7 @@ import br.com.andesoncfsilva.weathernow.R
 import br.com.andesoncfsilva.weathernow.entities.CityWeather
 import br.com.andesoncfsilva.weathernow.entities.UnitTemp
 import br.com.andesoncfsilva.weathernow.exception.factory.ErrorMessageFactory
+import br.com.andesoncfsilva.weathernow.utils.RemoteConfig
 import br.com.andesoncfsilva.weathernow.utils.safeLet
 import br.com.andesoncfsilva.weathernow.views.base.MvpActivity
 import com.daimajia.androidanimations.library.Techniques
@@ -49,6 +50,7 @@ class MainActivity : MvpActivity<MainView, MainPresenter>(),
 
     override fun onStart() {
         super.onStart()
+        RemoteConfig.fetch()
         if (!EventBus.getDefault().isRegistered(this))
             EventBus.getDefault().register(this)
         if (checkPlayServicesAvailable()) {

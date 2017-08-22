@@ -1,6 +1,8 @@
 package br.com.andesoncfsilva.weathernow
 
 import android.app.Application
+import android.content.Context
+import android.support.multidex.MultiDex
 import br.com.andesoncfsilva.weathernow.di.components.AppComponent
 import br.com.andesoncfsilva.weathernow.di.components.DaggerAppComponent
 import br.com.andesoncfsilva.weathernow.di.modules.AppModule
@@ -24,6 +26,11 @@ class WeatherNowApplication : Application() {
         super.onCreate()
         component.inject(this)
         timberConfig()
+    }
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
     }
 
     private fun timberConfig() {

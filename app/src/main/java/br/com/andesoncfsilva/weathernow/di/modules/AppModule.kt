@@ -57,7 +57,7 @@ import javax.inject.Singleton
         return Retrofit.Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .baseUrl(BuildConfig.OPEN_WEATHER_MAP_URL)
+                .baseUrl(RemoteConfig.OPEN_WEATHER_MAP_URL)
                 .client(okHttpClient).build()
     }
 
