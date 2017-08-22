@@ -1,7 +1,6 @@
 package br.com.andesoncfsilva.weathernow.di.modules
 
 import android.content.Context
-import br.com.andesoncfsilva.weathernow.BuildConfig
 import br.com.andesoncfsilva.weathernow.WeatherNowApplication
 import br.com.andesoncfsilva.weathernow.data.*
 import br.com.andesoncfsilva.weathernow.di.executors.JobExecutor
@@ -13,13 +12,15 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
-import okhttp3.OkHttpClient
+import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.File
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
+
 
 /**
  * Created by Anderson Silva on 16/08/17.
@@ -41,10 +42,22 @@ import javax.inject.Singleton
     @Provides @Singleton fun provideOkhttpClient(context: Context): OkHttpClient {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
-        val timeout: Long = 30
+        val timeout: Long = RemoteConfig.HTTP_TIMEOUT_SECONDS
         val client = OkHttpClient.Builder()
+        val cache = Cache(File(context.cacheDir, "http-cache"), 10 * 1024 * 1024)
 
         client.networkInterceptors().add(logging)
+        client.addNetworkInterceptor { chain ->
+            val response = chain.proceed(chain.request())
+            val cacheControl = CacheControl.Builder()
+                    .maxAge(RemoteConfig.HTTP_CACHE_MINUTES.toInt(), TimeUnit.MINUTES)
+                    .build()
+
+            response.newBuilder()
+                    .header("Cache-Control", cacheControl.toString())
+                    .build()
+        }
+        client.cache(cache)
         client.connectTimeout(timeout, TimeUnit.SECONDS)
         client.writeTimeout(timeout, TimeUnit.SECONDS)
         client.readTimeout(timeout, TimeUnit.SECONDS)

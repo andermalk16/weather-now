@@ -12,6 +12,10 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
  */
 object RemoteConfig {
 
+    val HTTP_TIMEOUT_SECONDS: Long
+        get() = config.getLong("HTTP_TIMEOUT_SECONDS")
+    val HTTP_CACHE_MINUTES: Long
+        get() = config.getLong("HTTP_CACHE_MINUTES")
     val OPEN_WEATHER_MAP_KEY: String
         get() = config.getString( "OPEN_WEATHER_MAP_KEY")
     val OPEN_WEATHER_MAP_URL: String

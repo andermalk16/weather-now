@@ -12,4 +12,12 @@
         <key>OPEN_WEATHER_MAP_URL_IMAGE</key>
         <value>http://openweathermap.org/img/w/</value>
     </entry>
+    <entry>
+        <key>HTTP_CACHE_MINUTES</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>HTTP_TIMEOUT_SECONDS</key>
+        <value>30</value>
+    </entry>
 </defaultsMap>
